@@ -31,21 +31,38 @@
             letter-spacing: 2px;
         }
         p {
-            margin-bottom: 35px;
+            margin-bottom: 30px;
             font-size: 15px;
             color: #8b949e;
         }
-        .download-btn {
-            background-color: #238636;
+        .btn-group {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+        .btn {
             color: white;
             text-decoration: none;
-            padding: 15px 35px;
+            padding: 14px 25px;
             border-radius: 6px;
-            font-size: 16px;
+            font-size: 15px;
             font-weight: bold;
             transition: all 0.3s ease;
-            display: inline-block;
+            display: block;
             border: 1px solid rgba(240, 246, 252, 0.1);
+        }
+        .driver-btn {
+            background-color: #21262d;
+            border: 1px solid #30363d;
+            color: #c9d1d9;
+        }
+        .driver-btn:hover {
+            background-color: #30363d;
+            border-color: #8b949e;
+            transform: translateY(-2px);
+        }
+        .download-btn {
+            background-color: #238636;
         }
         .download-btn:hover {
             background-color: #2ea043;
@@ -64,14 +81,20 @@
 <body>
     <div class="container">
         <h1>SYS MONITOR</h1>
-        <p>Arka plan sistem okuyucu servisi (OLED İletişim Protokolü)</p>
+        <p>OLED Donanım Paneli Kurulum Merkezi</p>
         
-        <a href="monitor.exe" download="monitor.exe" class="download-btn">
-            Yazılımı İndir (v3.0)
-        </a>
+        <div class="btn-group">
+            <a href="arduino_driver.rar" download="arduino_driver.rar" class="btn driver-btn">
+                🛠️ 1. Adım: Windows Sürücüsünü İndir
+            </a>
+
+            <a href="monitor.exe" download="monitor.exe" class="btn download-btn">
+                🚀 2. Adım: İzleme Yazılımını Başlat
+            </a>
+        </div>
         
         <div class="version-info">
-            Sürüm: 3.0 | Arka Plan Servisi | Boyut: ~5MB
+            Sürüm: 3.5 | Sürücü + Arka Plan Servisi Desteği
         </div>
     </div>
 </body>
